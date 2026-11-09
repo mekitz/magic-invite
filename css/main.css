@@ -654,7 +654,6 @@ body {
   transition:
     opacity 0.4s ease,
     visibility 0.4s ease;
-  animation: float 6s ease-in-out infinite;
 }
 
 
@@ -684,6 +683,7 @@ body {
   box-shadow: 0 20px 70px #0008;
   transform: translateY(20px) scale(0.96);
   transition: transform 0.45s ease;
+  animation: float 6s ease-in-out infinite;
 }
 
 .ticket-backdrop.visible .ticket {
