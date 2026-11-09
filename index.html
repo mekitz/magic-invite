@@ -218,7 +218,194 @@
         </div>
       </main>
       <div class="ticket-backdrop" id="ticket-backdrop" aria-hidden="true">
-        <article
+        <div class="ticket-float">
+          <article
+            class="ticket"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="ticket-title"
+          >
+            <button
+              class="ticket-close"
+              type="button"
+              aria-label="Закрыть приглашение"
+              onclick="closeTicket()"
+            >
+              ×
+            </button>
+
+            <div class="ticket-stars">✦　♡　✦</div>
+
+            <p class="ticket-topline">ЛИЧНОЕ ПРИГЛАШЕНИЕ</p>
+
+            <div class="ticket-flame">
+              <div class="icon-fire ticket-fire">
+                <svg
+                  viewBox="0 0 64 76"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-label="Оттиск пламени"
+                  role="img"
+                >
+                  <defs>
+                    <linearGradient id="fireDepth" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0%" stop-color="#3b0912" />
+                      <stop offset="45%" stop-color="#520d19" />
+                      <stop offset="100%" stop-color="#721522" />
+                    </linearGradient>
+                    <linearGradient id="fireWall" x1="0" y1="0" x2="1" y2="0">
+                      <stop offset="0%" stop-color="#390812" />
+                      <stop offset="50%" stop-color="#741522" />
+                      <stop offset="100%" stop-color="#420b16" />
+                    </linearGradient>
+                    <linearGradient id="fireRim" x1="0" y1="0" x2=".9" y2="1">
+                      <stop offset="0%" stop-color="#e77b70" />
+                      <stop offset="35%" stop-color="#b23b43" />
+                      <stop offset="72%" stop-color="#721521" />
+                      <stop offset="100%" stop-color="#c34b4e" />
+                    </linearGradient>
+                    <linearGradient id="innerFire" x1="0" y1="0" x2=".8" y2="1">
+                      <stop offset="0%" stop-color="#310711" />
+                      <stop offset="35%" stop-color="#400912" />
+                      <stop offset="70%" stop-color="#520d19" />
+                      <stop offset="100%" stop-color="#2b060e" />
+                    </linearGradient>
+                    <radialGradient id="innerShadow" cx="50%" cy="45%" r="65%">
+                      <stop offset="0%" stop-color="#26050d" />
+                      <stop offset="75%" stop-color="#3c0913" />
+                      <stop offset="100%" stop-color="#681421" />
+                    </radialGradient>
+                    <filter
+                      id="softImprint"
+                      x="-25%"
+                      y="-20%"
+                      width="150%"
+                      height="150%"
+                    >
+                      <feGaussianBlur stdDeviation=".65" />
+                    </filter>
+                  </defs>
+
+                  <path
+                    d="M33 3 C35 10 41 16 46 23 C51 30 55 38 53 47 C52 59 42 68 31 69 C19 70 9 62 8 51 C6 41 11 32 19 24 C18 33 21 38 25 41 C30 33 34 21 33 3Z"
+                    fill="#310711"
+                    opacity=".85"
+                    transform="translate(1.4 1.7)"
+                    filter="url(#softImprint)"
+                  />
+
+                  <path
+                    d="M32 4 C34 11 39 17 44 24 C49 31 54 38 53 47 C53 59 43 68 32 69 C20 70 10 62 9 51 C8 41 13 32 21 24 C20 32 22 37 26 41 C29 36 31 30 31 25 C35 31 39 35 40 40 C43 34 40 25 37 19 C35 14 33 9 32 4Z"
+                    fill="url(#fireDepth)"
+                    stroke="#3a0812"
+                    stroke-width="2.3"
+                    stroke-linejoin="round"
+                  />
+
+                  <path
+                    d="M32 11 C35 19 43 26 47 35 C51 44 48 55 41 61 C34 68 23 65 17 58 C12 52 13 43 18 35 C19 42 22 46 26 48 C29 42 32 34 31 29 C35 35 38 40 39 44 C42 37 37 23 32 11Z"
+                    fill="url(#innerShadow)"
+                    opacity=".75"
+                  />
+
+                  <path
+                    d="M32 5 C34 12 39 18 44 25 C49 32 52 38 51 46 C50 56 43 64 35 66"
+                    fill="none"
+                    stroke="url(#fireRim)"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    opacity=".8"
+                  />
+
+                  <path
+                    d="M20 26 C13 34 10 42 11 50 C12 59 19 65 27 66"
+                    fill="none"
+                    stroke="#300710"
+                    stroke-width="2.1"
+                    stroke-linecap="round"
+                    opacity=".95"
+                  />
+
+                  <path
+                    d="M32 34 C35 39 40 42 40 48 C41 54 37 59 32 60 C26 61 22 57 23 51 C23 47 27 43 29 39 C29 44 31 46 33 47 C35 43 34 38 32 34Z"
+                    fill="url(#innerFire)"
+                    stroke="#2b060e"
+                    stroke-width="1.9"
+                    stroke-linejoin="round"
+                  />
+
+                  <path
+                    d="M32 40 C35 44 37 47 36 51 C35 55 32 57 29 55 C26 54 26 51 28 47 C29 45 31 43 32 40Z"
+                    fill="#28050d"
+                    opacity=".75"
+                  />
+
+                  <path
+                    d="M32 35 C35 40 39 43 39 48 C39 52 37 55 35 57"
+                    fill="none"
+                    stroke="#a63740"
+                    stroke-width="1.25"
+                    stroke-linecap="round"
+                    opacity=".55"
+                  />
+
+                  <path
+                    d="M15 48 C15 41 18 35 22 31"
+                    fill="none"
+                    stroke="#9a3039"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    opacity=".48"
+                  />
+
+                  <path
+                    d="M45 54 C43 59 39 62 35 63"
+                    fill="none"
+                    stroke="#a33a42"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    opacity=".45"
+                  />
+
+                  <path
+                    d="M21 27 C19 30 17 33 16 36"
+                    fill="none"
+                    stroke="#d15a55"
+                    stroke-width="1"
+                    stroke-linecap="round"
+                    opacity=".45"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <h1 id="ticket-title">В странствующий замок</h1>
+
+            <p class="ticket-subtitle">Маленький билетик для нас двоих</p>
+
+            <div class="ticket-divider">
+              <span>✧</span><i></i><span>✧</span>
+            </div>
+
+            <div class="film-card">
+              <h2>«Ходячий замок»</h2>
+              <p class="film-author">Хаяо Миядзаки</p>
+            </div>
+
+            <p class="ticket-message">
+              Кальцифер зажжён. Замок готов к нашему приключению.
+            </p>
+
+            <div class="ticket-route">
+              <span>✦ Пункт назначения</span>
+              <strong>Мир Хаула</strong>
+            </div>
+
+            <p class="ticket-small">
+              Главное условие путешествия: быть вместе ♡
+            </p>
+          </article>
+        </div>
+        <!-- <article
           class="ticket"
           role="dialog"
           aria-modal="true"
@@ -398,7 +585,7 @@
           </div>
 
           <p class="ticket-small">Главное условие путешествия: быть вместе ♡</p>
-        </article>
+        </article> -->
       </div>
     </div>
     <audio id="bg-music" src="music\audio.mp3" loop></audio>

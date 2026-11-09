@@ -656,6 +656,12 @@ body {
     visibility 0.4s ease;
 }
 
+.ticket-float {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: float 6s ease-in-out infinite;
+}
 
 .ticket-backdrop.visible {
   opacity: 1;
@@ -683,7 +689,6 @@ body {
   box-shadow: 0 20px 70px #0008;
   transform: translateY(20px) scale(0.96);
   transition: transform 0.45s ease;
-  animation: float 6s ease-in-out infinite;
 }
 
 .ticket-backdrop.visible .ticket {
@@ -879,7 +884,7 @@ body {
   }
 
   .ticket {
-    zoom: 0.8;
+    zoom: 0.6;
   }
 
   .envelope {
